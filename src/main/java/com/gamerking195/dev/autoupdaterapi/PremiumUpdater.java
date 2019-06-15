@@ -290,8 +290,8 @@ public class PremiumUpdater {
                     int grabbed;
                     while ((grabbed = in.read(data, 0, grabSize)) >= 0) {
 
-                        //if (AutoUpdaterAPI.getInstance().isDebug())
-                        //AutoUpdaterAPI.getInstance().getLogger().info(System.currentTimeMillis()+" - GRABBED "+grabbed+"/"+grabSize+" ("+String.format("%.2f", (((double) grabbed) / ((double) grabSize)) * 100)+"%)");
+                        if (AutoUpdaterAPI.getInstance().isDebug())
+                        AutoUpdaterAPI.getInstance().getLogger().info(System.currentTimeMillis()+" - GRABBED "+grabbed+"/"+grabSize+" ("+String.format("%.2f", (((double) grabbed) / ((double) grabSize)) * 100)+"%)");
 
                         downloadedFileSize += grabbed;
 
